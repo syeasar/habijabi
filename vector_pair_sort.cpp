@@ -3,18 +3,18 @@
 using namespace std;
 
 bool sortBySecAsc(const pair <int,int> &a, const pair <int,int> &b) {
-    return a.first < b.first;
+    return a.second < b.second;
 }
 
 bool sortByFirstThenSecAsc(const pair <int,int> &a, const pair <int,int> &b) {
     if(a.first == b.first)
-        return (a.second < b.second);
+        return a.second < b.second;
     else
         return a.first < b.first;
 }
 
 bool sortBySecDsc(const pair <int,int> &a, const pair <int,int> &b) {
-    return (a.second > b.second);
+    return a.second > b.second;
 }
 
 int main() {
